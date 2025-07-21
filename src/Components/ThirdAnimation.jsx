@@ -86,10 +86,10 @@ function ThirdAnimation() {
     // Animate heading text
     gsap.fromTo(
       gsap.utils.toArray(".line"),
-      { y: 0 ,autoAlpha:1},
+      { y: 0, autoAlpha: 1 },
       {
         y: -800,
-        autoAlpha:0,
+        autoAlpha: 0,
         ease: "power2.out",
         duration: 0.7,
         stagger: 0.02,
@@ -106,56 +106,55 @@ function ThirdAnimation() {
 
     // Animate images one by one upward with fade out
     const tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: parendiv.current,
-    start: "top top",
-    end: "+=2000",
-    scrub: true,
-    pin: false,
-    markers: true,
-  },
-});
+      scrollTrigger: {
+        trigger: parendiv.current,
+        start: "top top",
+        end: "+=2000",
+        scrub: true,
+        pin: false,
+        markers: true,
+      },
+    });
 
-const images = gsap.utils.toArray(".thirdanimationimg");
+    const images = gsap.utils.toArray(".thirdanimationimg");
 
-images.forEach((img, index) => {
-  const delay = index * 0.2; // stagger
+    images.forEach((img, index) => {
+      const delay = index * 0.2; // stagger
 
-  // Step 1: Move upward to center (e.g., y: -600)
-  tl.fromTo(
-    img,
-    { y: 0, autoAlpha: 1 },
-    {
-      y: -600,
-      ease: "power2.out",
-      duration: 0.5,
-    },
-    delay
-  );
+      // Step 1: Move upward to center (e.g., y: -600)
+      tl.fromTo(
+        img,
+        { y: 0, autoAlpha: 1 },
+        {
+          y: -600,
+          ease: "power2.out",
+          duration: 0.5,
+        },
+        delay
+      );
 
-  // Step 2: Slight pause/smooth settle in center
-  tl.to(
-    img,
-    {
-      y: -600,
-      ease: "none",
-      duration: 0.3,
-    },
-    delay + 0.7
-  );
+      // Step 2: Slight pause/smooth settle in center
+      tl.to(
+        img,
+        {
+          y: -600,
+          ease: "none",
+          duration: 0.3,
+        },
+        delay + 0.7
+      );
 
-  // Step 3: Continue upward smoothly
-  tl.to(
-    img,
-    {
-      y: -1500,
-      ease: "power2.in",
-      duration: 0.7,
-    },
-    delay + 0.9
-  );
-});
-
+      // Step 3: Continue upward smoothly
+      tl.to(
+        img,
+        {
+          y: -1500,
+          ease: "power2.in",
+          duration: 0.7,
+        },
+        delay + 0.9
+      );
+    });
 
     const employetext = gsap.utils.toArray(".employetext");
 
@@ -205,7 +204,7 @@ images.forEach((img, index) => {
           {[imgone, imgtwo, imgthree, imgfour, imgfive].map((img, i) => (
             <div
               key={i}
-              className="thirdanimationimg  rounded-2xl w-80 h-[40vh] bg-white bg-cover "
+              className="thirdanimationimg  rounded-2xl 2xl:w-80 lg:w-45 2xl:h-[40vh] lg:h-[30vh] bg-white bg-cover "
               style={{
                 backgroundImage: `url(${img})`,
                 left: `${10 + i * 15}vw`,
@@ -217,10 +216,10 @@ images.forEach((img, index) => {
 
       <div ref={empparentdiv} className="w-screen h-screen flex p-10 bg-white">
         <div className="flex w-1/3 text-black flex-col  bg-white">
-          <span className="employetext text-8xl mt-[18rem] ml-[5rem] leading-25 bg-gradient-to-br from-[#D4A276] via-[#A16247] to-[#5A2E1F] bg-clip-text text-transparent">
+          <span className="employetext 2xl:text-8xl lg:text-6xl mt-[18rem] ml-[5rem] 2xl:leading-25 lg:leading-16 bg-gradient-to-br from-[#D4A276] via-[#A16247] to-[#5A2E1F] bg-clip-text text-transparent">
             Meet Our Experts
           </span>
-          <span className="employetext ml-[5rem] w-[70%] text-lg mt-8">
+          <span className="employetext ml-[5rem] w-[70%] 2xl:text-lg lg:text-sm mt-8">
             Lorem ipsum, dolor sit amet consectetur adipisicing tis neque? Ullam
             quam atque eos rerum ad error commodi mollitia modi quo ea.
           </span>

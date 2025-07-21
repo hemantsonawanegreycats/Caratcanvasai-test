@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 function RandomtextChar() {
   gsap.registerPlugin(ScrollTrigger);
 
+
   const scrollparent = useRef(null);
 
   useGSAP(() => {
@@ -22,7 +23,7 @@ function RandomtextChar() {
       },
     });
 
-    // Initial entry (from random to normal)
+
     tl.fromTo(
       chars,
       {
@@ -39,11 +40,12 @@ function RandomtextChar() {
         filter: "blur(0px)",
         duration: 2,
         ease: "power2.out",
+    
         stagger: 0.3,
       }
     );
 
-    // Exit (normal to random)
+   
     tl.to(chars, {
       x: () => gsap.utils.random(-300, 300),
       y: () => gsap.utils.random(-300, 300),
@@ -55,8 +57,7 @@ function RandomtextChar() {
     });
   }, []);
 
-  //   creations for your Brand
-  //  - your Brand
+
 
   return (
     <>
@@ -64,10 +65,10 @@ function RandomtextChar() {
         ref={scrollparent}
         className="w-screen flex h-[100vh] items-center flex-col justify-center"
       >
-        <div className="w-[60%] mt-5  text-center leading-30 flex flex-wrap justify-center ">
+        <div className="w-[60%] mt-5  text-center 2xl:leading-30 lg:leading-20 flex flex-wrap justify-center ">
           {[..."Find - new "].map((char, i) => (
             <span
-              className="chars text-[9rem] uppercase bg-gradient-to-br from-[#D4A276] via-[#A16247] to-[#5A2E1F] bg-clip-text text-transparent "
+              className="chars 2xl:text-[9rem] lg:text-[5rem] md:text-[4rem] uppercase bg-gradient-to-br from-[#D4A276] via-[#A16247] to-[#5A2E1F] bg-clip-text text-transparent "
               key={i}
             >
               {char}
@@ -75,10 +76,10 @@ function RandomtextChar() {
           ))}
         </div>
 
-        <div className="w-[60%] mt-10 text-center leading-30 flex flex-wrap justify-center">
+        <div className="w-[60%]  2xl:mt-10 lg:mt-2 text-center 2xl:leading-30 lg:leading-20 flex flex-wrap justify-center">
           {[..."creations - for "].map((char, i) => (
             <span
-              className="chars text-[9rem] uppercase bg-gradient-to-br from-[#D4A276] via-[#A16247] to-[#5A2E1F] bg-clip-text text-transparent "
+              className="chars 2xl:text-[9rem] lg:text-[5rem] md:text-[4rem] uppercase bg-gradient-to-br from-[#D4A276] via-[#A16247] to-[#5A2E1F] bg-clip-text text-transparent "
               key={i}
             >
               {char}
@@ -86,10 +87,10 @@ function RandomtextChar() {
           ))}
         </div>
 
-        <div className="w-[60%] mt-10 text-center leading-30 flex flex-wrap justify-center">
+        <div className="w-[60%] 2xl:mt-10 lg:mt-2 text-center 2xl:leading-30 lg:leading-20 flex flex-wrap justify-center">
           {[..."Your-brand "].map((char, i) => (
             <span
-              className="chars text-[9rem] uppercase bg-gradient-to-br from-[#D4A276] via-[#A16247] to-[#5A2E1F] bg-clip-text text-transparent "
+              className="chars 2xl:text-[9rem] lg:text-[5rem] md:text-[4rem] uppercase bg-gradient-to-br from-[#D4A276] via-[#A16247] to-[#5A2E1F] bg-clip-text text-transparent "
               key={i}
             >
               {char}

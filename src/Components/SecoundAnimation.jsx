@@ -69,12 +69,12 @@ function SecoundAnimation() {
       >
         <div
           ref={firstbox}
-          className="w-screen h-[100vh]  relative bg-gradient-to-br from-[#D4A276] via-[#A16247] to-[#5A2E1F] text-white rounded-3xl overflow-hidden"
+          className="w-screen h-[100vh]  relative bg-gradient-to-bl from-[#5A2E1F] via-[#A16247] to-[#D4A276] text-white  overflow-hidden"
         >
           {/* Blurred Background Layer */}
           <div
             ref={blurbg}
-            className="w-[100%] h-[100%]  absolute inset-0 bg-cover bg-gradient-to-br from-[#D4A276] via-[#A16247] to-[#5A2E1F] text-white rounded-3xl blur-2xl z-0"
+            className="w-[100%] h-[100%]  absolute inset-0 bg-cover bg-gradient-to-br from-[#ffd1a9] via-[#A16247] to-[#5A2E1F] text-white rounded-3xl blur-2xl z-0"
           ></div>
 
           {/* Foreground Content */}
@@ -82,7 +82,7 @@ function SecoundAnimation() {
             <div className="mr-40">WE</div>
             <div
               ref={scalablebox}
-              className="absolute w-[16rem] rounded-3xl left-[42.5vw] h-xl text-white bg-white"
+              className="absolute w-[16rem] rounded-3xl lg:left-[37vw] 2xl:left-[42.5vw] h-xl text-white bg-white"
             >
               a
             </div>

@@ -12,16 +12,6 @@ function HeroSection({ mainparentref }) {
   gsap.registerPlugin(ScrollTrigger);
   const box = useRef(null);
   const parendiv = useRef(null);
-  // const scrolldowntext = useRef(null);
-  //   useEffect(() => {
-  //   document.body.style.overflow = "hidden";
-
-  //   const timeout = setTimeout(() => {
-  //     document.body.style.overflow = "auto";
-  //   }, 5000);
-
-  //   return () => clearTimeout(timeout); // cleanup
-  // }, []);
 
   function arrangeCenterOut(arr) {
     const result = [];
@@ -47,10 +37,6 @@ function HeroSection({ mainparentref }) {
     const scrolldowntext = gsap.utils.toArray(".scrolldowntext");
     const scrolldowntextsub = gsap.utils.toArray(".scrolldowntextsub");
     const heroimages = arrangeCenterOut(gsap.utils.toArray(".heroimages"));
-
-    // heroimages
-
-    console.log(mainparentref.current);
 
     gsap.fromTo(
       heroimages,
@@ -160,11 +146,11 @@ function HeroSection({ mainparentref }) {
         ref={box}
         className="absolute overflow-hidden top-10 z-20 w-[90%] h-[95vh] p-6  flex flex-col  items-center bg-gradient-to-br from-[#D4A276] via-[#A16247] to-[#5A2E1F] text-white rounded-3xl"
       >
-        <div className="flex flex-col justify-start items-center mt-8  ">
-          <span className="scrolldowntext text-center text-8xl pb-4 bg-gradient-to-r from-[#ffc7b0]  to-white bg-clip-text text-transparent ">
+        <div className="flex flex-col justify-start items-center mt-8">
+          <span className="scrolldowntext text-center 2xl:text-8xl lg:text-6xl pb-4 bg-gradient-to-r from-[#ffc7b0]  to-white bg-clip-text text-transparent ">
             Your Design. Your Story.
           </span>
-          <span className="scrolldowntext text-center text-8xl  bg-gradient-to-r from-[#ffc7b0]  to-white bg-clip-text text-transparent ">
+          <span className="scrolldowntext text-center 2xl:text-8xl lg:text-6xl  bg-gradient-to-r from-[#ffc7b0]  to-white bg-clip-text text-transparent ">
             Our AI brilliance
           </span>
         </div>
@@ -193,6 +179,8 @@ function HeroSection({ mainparentref }) {
         </div>
       </div>
 
+
+
       <div className="flex flex-col items-center justify-center w-screen">
         <div className="flex w-[30%] justify-around">
           {["W", "E", "L", "C", "O", "M", "E", "T", "O"].map((char, i) => (
@@ -214,7 +202,7 @@ function HeroSection({ mainparentref }) {
             </span>
           ))}
         </div>
-        <div className="text-amber-50 text-center flex flex-col z-20 absolute top-78">
+        <div className="text-amber-50 text-center flex flex-col z-20 absolute 2xl:top-78 lg:top-66">
           <span className="scrolldowntextsub tracking-wider">
             {" "}
             It is a long established fact that a reader will be distracted by
@@ -226,7 +214,7 @@ function HeroSection({ mainparentref }) {
           </span>
         </div>
 
-        <span className="scrolldowntextsub w-[10%] font-semibold text-xl flex items-center justify-center rounded-full absolute top-98 text-[#5f3c2a] h-14 z-20 bg-gradient-to-br from-[#ffffff] via-[#fff0ea] to-[#a15d46]">
+        <span className="scrolldowntextsub 2xl:w-[10%] lg:w-[14%] font-semibold 2xl:text-xl lg:text-lg flex items-center justify-center rounded-full absolute 2xl:top-98 lg:top-88 text-[#5f3c2a] h-14 z-20 bg-gradient-to-br from-[#ffffff] via-[#fff0ea] to-[#a15d46]">
           Explore Now
         </span>
       </div>
